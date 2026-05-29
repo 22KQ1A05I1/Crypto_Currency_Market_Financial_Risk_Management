@@ -13,7 +13,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm+1edl5m-5@u9u!b8-=4-4mq&o1%agco2xpl8c!7sn7!eowjk#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = [] delllllllllllllllllllllll
 
@@ -71,14 +72,19 @@ WSGI_APPLICATION = 'crypto_currency_market_financial_risk_management.wsgi.applic
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crypto_currency_market_financial_risk_management',
-        'USER':'root',
-        'PASSWORD': '',
-        'HOST' :'127.0.0.1',
-        'PORT' :'3306',
+       # 'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        
+      #  'NAME': 'crypto_currency_market_financial_risk_management',
+      #  'USER':'root',
+      #  'PASSWORD': '',
+       # 'HOST' :'127.0.0.1',
+       # 'PORT' :'3306',
     }
 }
+
+
 
 
 
