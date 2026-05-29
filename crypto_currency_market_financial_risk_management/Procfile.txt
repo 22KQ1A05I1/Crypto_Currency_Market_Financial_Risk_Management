@@ -1,1 +1,0 @@
-web: gunicorn crypto_currency_market_financial_risk_management.wsgi
